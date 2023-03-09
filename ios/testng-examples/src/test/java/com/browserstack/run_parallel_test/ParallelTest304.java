@@ -28,7 +28,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class ParallelTest extends BrowserStackTestNGTest {
+public class ParallelTest304 extends BrowserStackTestNGTest {
 
   @Test
   public void test() throws Exception {
@@ -37,6 +37,8 @@ public class ParallelTest extends BrowserStackTestNGTest {
             .withTimeout(Duration.ofSeconds(30))
             .pollingEvery(Duration.ofMillis(500))
             .ignoring(NotFoundException.class);
+
+            // "app": "bs://e07accbe46c8e861c740c5ba097b3609491212c2",
 
     MobileElement el1 = wait.until(d -> d.findElement(By.id("Allow")));
         el1.click();
@@ -134,7 +136,7 @@ public class ParallelTest extends BrowserStackTestNGTest {
         driver.context("NATIVE_APP");
         MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));
         el18.click();
-        Thread.sleep(9000);
+        Thread.sleep(6000);
         MobileElement el16 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeStaticText[@name='Smart & secure way to pay using Qik EMI, NeuCoins, saved cards & more']"));
         el16.click();
         
