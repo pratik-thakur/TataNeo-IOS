@@ -26,6 +26,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 
 public class ParallelTest305 extends BrowserStackTestNGTest {
@@ -40,6 +41,7 @@ public class ParallelTest305 extends BrowserStackTestNGTest {
 
             // "app":"bs://d17e043f871277fb6f96a0b44c8866382e58f15d", bs://fb1e25dd6fe822253ce700477ef34c2b16898648
             Thread.sleep(5000);
+            percy.screenshot("First Screenshot");
             if(driver.findElementByAccessibilityId("Allow While Using App").isDisplayed() )
             {
               MobileElement el1 = wait.until(d -> d.findElementByAccessibilityId("Allow While Using App"));
@@ -52,7 +54,7 @@ public class ParallelTest305 extends BrowserStackTestNGTest {
               MobileElement el2 = wait.until(d -> d.findElementByAccessibilityId("Allow"));
               el2.click();
             }
-
+            percy.screenshot("Second Screenshot");
 MobileElement el3 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeButton"));
 el3.click();
 MobileElement el4 = wait.until(d -> d.findElementByAccessibilityId("Access your NeuCoins, orders and profile.\nYour NeuPass and lot more is waiting. \nLOGIN/ SIGN UP"));
@@ -67,7 +69,23 @@ Thread.sleep(5000);
 
 // Click on mobile
 
+// MobileElement elx =  wait.until(d -> d.findElementByAccessibilityId("tabInActiveExploreIcon"));
+// elx.click();
+// Thread.sleep(5000);
+// (new TouchAction(driver)).tap(PointOption.point(191, 188)).perform();
+// Thread.sleep(5000);
+// (new TouchAction(driver)).tap(PointOption.point(181, 216)).perform();
+
+// Set<String> contextNames = driver.getContextHandles();
+// System.out.println(contextNames);
+// TouchAction action2 = new TouchAction(driver);
+//   action2.press(PointOption.point(540, 600));
+//   action2.moveTo(PointOption.point(544, 417));
+//   action2.release();
+//   action2.perform();
 // MobileElement el8 = wait.until(d -> d.findElementByAccessibilityId("Mobiles"));
+// Thread.sleep(20000);
+// el8.isDisplayed();
 // el8.click();
 // Thread.sleep(5000);
 //           MobileElement el9 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeImage"));
@@ -98,6 +116,8 @@ String contexts = driver.getContextHandles().toArray()[3].toString();
         driver.context(contexts);
 
         Thread.sleep(10000);
+        // (new TouchAction(driver)).tap(PointOption.point(102, 185)).perform();
+        // (new TouchAction(driver)).tap(PointOption.point(354, 529)).perform();
         MobileElement pincodeLbl = wait.until(d -> d.findElement(By.xpath("(//span[@class='header-pincode-edit pincode-s-edit pincode-pencil-icon'])[2]")));
         pincodeLbl.click();
 

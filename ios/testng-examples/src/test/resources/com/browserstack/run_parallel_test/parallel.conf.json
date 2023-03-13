@@ -12,15 +12,15 @@
       "sessionName": "BStack parallel_test",
       "debug": true,
       "userName":"userName",
-      "accessKey": "AccessKey",
+      "accessKey": "accessKey",
       "appiumVersion": "1.22.0"
     }
   },
 
   "environments": [
     { 
-      "deviceName": "iPhone 14",
-      "platformVersion": "16",
+      "deviceName": "iPhone 13",
+      "platformVersion": "15",
       "platformName": "ios"
     }
   ]

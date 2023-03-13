@@ -7,7 +7,7 @@ import java.io.FileReader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONArray;
-
+import io.percy.appium.AppPercy;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.testng.annotations.BeforeMethod;
@@ -22,7 +22,7 @@ import io.appium.java_client.MobileElement;
 public class BrowserStackTestNGTest {
   // public IOSDriver<IOSElement> driver;
   public IOSDriver<MobileElement> driver;
-
+  public static AppPercy percy;
   @BeforeMethod(alwaysRun=true)
   @org.testng.annotations.Parameters(value={"deviceIndex"})
   public void setUp(String deviceIndex) throws Exception {
@@ -65,6 +65,7 @@ public class BrowserStackTestNGTest {
 
     // driver = new IOSDriver<IOSElement>(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
     driver = new IOSDriver<>(new URL("http://"+username+":"+accessKey+"@"+config.get("server")+"/wd/hub"), capabilities);
+    percy = new AppPercy(driver);
   }
 
   @AfterMethod(alwaysRun=true)
