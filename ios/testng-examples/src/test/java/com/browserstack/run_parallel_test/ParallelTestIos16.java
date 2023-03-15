@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.Set;
 
 
-public class ParallelTest305 extends BrowserStackTestNGTest {
+public class ParallelTestIos16 extends BrowserStackTestNGTest {
 
   @Test
   public void test() throws Exception {
@@ -57,8 +57,10 @@ public class ParallelTest305 extends BrowserStackTestNGTest {
             percy.screenshot("Second Screenshot");
 MobileElement el3 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeButton"));
 el3.click();
-MobileElement el4 = wait.until(d -> d.findElementByAccessibilityId("Access your NeuCoins, orders and profile.\nYour NeuPass and lot more is waiting. \nLOGIN/ SIGN UP"));
+Thread.sleep(5000);
+MobileElement el4 = wait.until(d -> d.findElementByAccessibilityId("Access your NeuCoins, orders and profile.\nYour NeuPass and lot more is waiting. \nLOGIN / SIGN UP"));
 el4.click();
+// XCUIElementTypeImage[@name="Access your NeuCoins, orders and profile. Your NeuPass and lot more is waiting. LOGIN / SIGN UP"]
 MobileElement el5 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"));
 el5.sendKeys("7059791147");
 MobileElement el6 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeButton[@name=\"GET OTP\"]"));
@@ -69,12 +71,12 @@ Thread.sleep(5000);
 
 // Click on mobile
 
-// MobileElement elx =  wait.until(d -> d.findElementByAccessibilityId("tabInActiveExploreIcon"));
-// elx.click();
-// Thread.sleep(5000);
-// (new TouchAction(driver)).tap(PointOption.point(191, 188)).perform();
-// Thread.sleep(5000);
-// (new TouchAction(driver)).tap(PointOption.point(181, 216)).perform();
+MobileElement elx =  wait.until(d -> d.findElementByAccessibilityId("tabInActiveExploreIcon"));
+elx.click();
+Thread.sleep(5000);
+(new TouchAction(driver)).tap(PointOption.point(191, 188)).perform();
+Thread.sleep(5000);
+(new TouchAction(driver)).tap(PointOption.point(181, 216)).perform();
 
 // Set<String> contextNames = driver.getContextHandles();
 // System.out.println(contextNames);
@@ -94,25 +96,32 @@ Thread.sleep(5000);
 
 // Search for element
 
-MobileElement el8 = wait.until(d -> d.findElementByAccessibilityId("Search for"));
-el8.click();
-MobileElement el9 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeTextField[@name=\"Search\"]"));
-Thread.sleep(5000);
-el9.sendKeys("bosh");
-// MobileElement el10 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeTextField[@name=\"Search\"]"));
-// el10.sendKeys("Elica 1100");
-// // el10.click();
-Thread.sleep(5000);
-MobileElement el11 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeButton[@name=\"Search\"]"));
-el11.click();
-Thread.sleep(5000);
-(new TouchAction(driver)).tap(PointOption.point(221, 200)).perform();
-// MobileElement el12 = wait.until(d -> d.findElementByAccessibilityId("On Sale\nElica 1100 m³/hr 60cm Filterless Chimney (Motion Sensor Control, EFL-S607 VMS, Black)\n₹13,999\n₹28,990\n(52%)\nYay! You earn up to \n 699.95 NeuCoins!\nGet free delivery, Sunday, March 5, 2023"));
-// el12.click();
+// MobileElement el8 = wait.until(d -> d.findElementByAccessibilityId("Search for"));
+// el8.click();
+// MobileElement el9 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeTextField[@name=\"Search\"]"));
+// Thread.sleep(5000);
+// el9.sendKeys("bosh");
+// // MobileElement el10 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeTextField[@name=\"Search\"]"));
+// // el10.sendKeys("Elica 1100");
+// // // el10.click();
+// Thread.sleep(5000);
+// MobileElement el11 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeButton[@name=\"Search\"]"));
+// el11.click();
+// Thread.sleep(5000);
+// (new TouchAction(driver)).tap(PointOption.point(221, 200)).perform();
+// // MobileElement el12 = wait.until(d -> d.findElementByAccessibilityId("On Sale\nElica 1100 m³/hr 60cm Filterless Chimney (Motion Sensor Control, EFL-S607 VMS, Black)\n₹13,999\n₹28,990\n(52%)\nYay! You earn up to \n 699.95 NeuCoins!\nGet free delivery, Sunday, March 5, 2023"));
+// // el12.click();
 
 Thread.sleep(10000);
-System.out.println(driver.getContextHandles().toArray());
-String contexts = driver.getContextHandles().toArray()[3].toString();
+Set<String> contextNames = driver.getContextHandles();
+System.out.println("Context========================");
+System.out.println(contextNames);
+String contexts = driver.getContextHandles().toArray()[4].toString();
+System.out.println(driver.getContextHandles().toArray()[0]);
+System.out.println(driver.getContextHandles().toArray()[1]);
+System.out.println(driver.getContextHandles().toArray()[2]);
+System.out.println(driver.getContextHandles().toArray()[4]);
+System.out.println(contexts);
         driver.context(contexts);
 
         Thread.sleep(10000);

@@ -7,10 +7,16 @@
             <class name="com.browserstack.run_parallel_test.ParallelTest304"/>
         </classes>
     </test> -->
-    <test name="ParallelTest2">
+    <!-- <test name="ParallelTest2">
     <parameter name="deviceIndex" value="0"/>
         <classes>
             <class name="com.browserstack.run_parallel_test.ParallelTest305"/>
+        </classes>
+    </test> -->
+    <test name="ParallelTestIos16">
+    <parameter name="deviceIndex" value="0"/>
+        <classes>
+            <class name="com.browserstack.run_parallel_test.ParallelTestIos16"/>
         </classes>
     </test>
 </suite>

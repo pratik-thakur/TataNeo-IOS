@@ -19,8 +19,8 @@
 
   "environments": [
     { 
-      "deviceName": "iPhone 13",
-      "platformVersion": "15",
+      "deviceName": "iPhone 14",
+      "platformVersion": "16",
       "platformName": "ios"
     }
   ]
