@@ -132,7 +132,7 @@ System.out.println(contexts);
 
         MobileElement pincodeTxb = wait.until(d -> d.findElement(By.xpath("//input[@class='formControl dark-input-pincode pinElem']")));
         pincodeTxb.clear();
-        pincodeTxb.setValue("400610");
+        pincodeTxb.setValue("400001");
 
         MobileElement continueBtn = wait.until(d -> d.findElement(By.xpath("//button[contains(text(),\'Continue\')]")));
         continueBtn.click();
@@ -142,12 +142,12 @@ jse.executeScript("window.scrollBy(0,300)", "");
   
 MobileElement el13 = wait.until(d -> d.findElementByXPath("//div[@id=\"add_to_cart_footer_container\"]/div/div/div[2]/div/button[1]"));
 el13.click();
-Thread.sleep(5000);
+Thread.sleep(10000);
 jse.executeScript("window.scrollBy(0,300)", "");
   
 MobileElement el14 = wait.until(d -> d.findElementByXPath("//div[@id=\"payment_footer_container\"]/div/div/div/div/button"));
 el14.click();
-Thread.sleep(5000);
+Thread.sleep(10000);
 jse.executeScript("window.scrollBy(0,300)", "");
 
 Thread.sleep(6000);
@@ -156,8 +156,8 @@ MobileElement el15 = wait.until(d -> d.findElementByXPath("//div[@id=\"payment_f
 
         Thread.sleep(6000);
         driver.context("NATIVE_APP");
-        MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));
-        el18.click();
+        // MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));
+        // el18.click();
         MobileElement el16 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeStaticText[@name='Smart & secure way to pay using Qik EMI, NeuCoins, saved cards & more']"));
         el16.click();
         Thread.sleep(6000);
