@@ -3,7 +3,7 @@
 
   "capabilities": {
     
-    "app":"AppID", 
+    "app":"bs://f1402b6711915a1e677dafc76e541bb76045230f", 
     "autoDissmissAlerts": "true",
     "nativeWebTap": "true",
     "bstack:options": {
@@ -13,7 +13,7 @@
       "debug": true,
       "userName":"userName",
       "accessKey": "accessKey",
-      "appiumVersion": "1.22.0"
+      "appiumVersion": "1.21.0"
     }
   },
 

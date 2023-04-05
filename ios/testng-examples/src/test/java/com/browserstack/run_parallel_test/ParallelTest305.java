@@ -55,9 +55,9 @@ public class ParallelTest305 extends BrowserStackTestNGTest {
               el2.click();
             }
             percy.screenshot("Second Screenshot");
-MobileElement el3 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeButton"));
+MobileElement el3 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]"));
 el3.click();
-MobileElement el4 = wait.until(d -> d.findElementByAccessibilityId("Access your NeuCoins, orders and profile.\nYour NeuPass and lot more is waiting. \nLOGIN/ SIGN UP"));
+MobileElement el4 = wait.until(d -> d.findElementByAccessibilityId("Access your NeuCoins, orders and profile.\nYour NeuPass and lot more is waiting.\nLOGIN / SIGN UP"));
 el4.click();
 MobileElement el5 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"));
 el5.sendKeys("7059791147");
@@ -66,31 +66,6 @@ el6.click();
 MobileElement el7 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[1]"));
 el7.sendKeys("214263");
 Thread.sleep(5000);
-
-// Click on mobile
-
-// MobileElement elx =  wait.until(d -> d.findElementByAccessibilityId("tabInActiveExploreIcon"));
-// elx.click();
-// Thread.sleep(5000);
-// (new TouchAction(driver)).tap(PointOption.point(191, 188)).perform();
-// Thread.sleep(5000);
-// (new TouchAction(driver)).tap(PointOption.point(181, 216)).perform();
-
-// Set<String> contextNames = driver.getContextHandles();
-// System.out.println(contextNames);
-// TouchAction action2 = new TouchAction(driver);
-//   action2.press(PointOption.point(540, 600));
-//   action2.moveTo(PointOption.point(544, 417));
-//   action2.release();
-//   action2.perform();
-// MobileElement el8 = wait.until(d -> d.findElementByAccessibilityId("Mobiles"));
-// Thread.sleep(20000);
-// el8.isDisplayed();
-// el8.click();
-// Thread.sleep(5000);
-//           MobileElement el9 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeApplication[@name=\"Tata Neu SIT\"]/XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[1]/XCUIElementTypeImage"));
-//           el9.click();
-
 
 // Search for element
 
@@ -116,8 +91,6 @@ String contexts = driver.getContextHandles().toArray()[3].toString();
         driver.context(contexts);
 
         Thread.sleep(10000);
-        // (new TouchAction(driver)).tap(PointOption.point(102, 185)).perform();
-        // (new TouchAction(driver)).tap(PointOption.point(354, 529)).perform();
         MobileElement pincodeLbl = wait.until(d -> d.findElement(By.xpath("(//span[@class='header-pincode-edit pincode-s-edit pincode-pencil-icon'])[2]")));
         pincodeLbl.click();
 
@@ -149,22 +122,22 @@ MobileElement el15 = wait.until(d -> d.findElementByXPath("//div[@id=\"payment_f
         driver.context("NATIVE_APP");
         MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));
         el18.click();
-        MobileElement el16 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeStaticText[@name='Smart & secure way to pay using Qik EMI, NeuCoins, saved cards & more']"));
-        el16.click();
-        Thread.sleep(6000);
-        MobileElement el17 = wait.until(d -> d.findElementByAccessibilityId("Place Order & Pay"));
-        el17.click();
+//         MobileElement el16 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeStaticText[@name='Smart & secure way to pay using Qik EMI, NeuCoins, saved cards & more']"));
+//         el16.click();
+//         Thread.sleep(6000);
+//         MobileElement el17 = wait.until(d -> d.findElementByAccessibilityId("Place Order & Pay"));
+//         el17.click();
 
-        Thread.sleep(15000);
-        MobileElement el19 = wait.until(d -> d.findElementByAccessibilityId("Netbanking"));
-el19.click();
-MobileElement el20 = wait.until(d -> d.findElementByXPath("(//XCUIElementTypeStaticText[@name=\"Axis Bank\"])[1]"));
-el20.click();
-Thread.sleep(20000); 
-MobileElement el21  = wait.until(d -> d.findElementByAccessibilityId("Success"));
-el21.isDisplayed();
-el21.click();
-         Thread.sleep(20000);
+//         Thread.sleep(15000);
+//         MobileElement el19 = wait.until(d -> d.findElementByAccessibilityId("Netbanking"));
+// el19.click();
+// MobileElement el20 = wait.until(d -> d.findElementByXPath("(//XCUIElementTypeStaticText[@name=\"Axis Bank\"])[1]"));
+// el20.click();
+// Thread.sleep(20000); 
+// MobileElement el21  = wait.until(d -> d.findElementByAccessibilityId("Success"));
+// el21.isDisplayed();
+// el21.click();
+         Thread.sleep(10000);
 
         System.out.print("End of code ==========================");
     
