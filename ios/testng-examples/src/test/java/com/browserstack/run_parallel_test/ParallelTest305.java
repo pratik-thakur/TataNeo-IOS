@@ -96,7 +96,7 @@ String contexts = driver.getContextHandles().toArray()[3].toString();
 
         MobileElement pincodeTxb = wait.until(d -> d.findElement(By.xpath("//input[@class='formControl dark-input-pincode pinElem']")));
         pincodeTxb.clear();
-        pincodeTxb.setValue("400610");
+        pincodeTxb.setValue("400001");
 
         MobileElement continueBtn = wait.until(d -> d.findElement(By.xpath("//button[contains(text(),\'Continue\')]")));
         continueBtn.click();
@@ -120,6 +120,7 @@ MobileElement el15 = wait.until(d -> d.findElementByXPath("//div[@id=\"payment_f
 
         Thread.sleep(6000);
         driver.context("NATIVE_APP");
+        Thread.sleep(4000);
         if(driver.findElementByAccessibilityId("Skip").isDisplayed())
         {
         MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));

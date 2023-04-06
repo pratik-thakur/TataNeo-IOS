@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel" thread-count="2" parallel="tests">
-    <!-- <test name="ParallelTest2">
+    <test name="ParallelTest2">
     <parameter name="deviceIndex" value="0"/>
         <classes>
             <class name="com.browserstack.run_parallel_test.ParallelTest305"/>
         </classes>
-    </test> -->
-    <test name="ParallelTestIos16">
+    </test>
+    <!-- <test name="ParallelTestIos16">
     <parameter name="deviceIndex" value="0"/>
         <classes>
             <class name="com.browserstack.run_parallel_test.ParallelTestIos16"/>
         </classes>
-    </test>
+    </test> -->
 </suite>
