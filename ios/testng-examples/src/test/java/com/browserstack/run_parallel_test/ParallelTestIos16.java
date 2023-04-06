@@ -131,8 +131,11 @@ MobileElement el15 = wait.until(d -> d.findElementByXPath("//div[@id=\"payment_f
 
         Thread.sleep(6000);
         driver.context("NATIVE_APP");
+        if(driver.findElementByAccessibilityId("Skip").isDisplayed())
+        {
         MobileElement el18 = wait.until(d -> d.findElementByAccessibilityId("Skip"));
         el18.click();
+        }
 //         MobileElement el16 = wait.until(d -> d.findElementByXPath("//XCUIElementTypeStaticText[@name='Smart & secure way to pay using Qik EMI, NeuCoins, saved cards & more']"));
 //         el16.click();
 //         Thread.sleep(6000);
