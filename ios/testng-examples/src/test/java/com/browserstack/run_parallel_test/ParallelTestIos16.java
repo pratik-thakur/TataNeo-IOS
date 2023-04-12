@@ -28,7 +28,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-
+// Tap Flow with touch action working for all
 public class ParallelTestIos16 extends BrowserStackTestNGTest {
 
   @Test
